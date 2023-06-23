@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arraytolist</title>
+</head>
+<body>
+    <h1> array to list</h1>
+    <ul id="lists"></ul>
+    <script>
+        var arrays=["saab","volvo","BMW","Tata","jaguar","land Rover"]
+        var list=document.getElementById("lists")
+        for(var i=0;i<=arrays.length-1;i++)   //array length=6-1=5.....0 to 5
+        {
+            var li=document.createElement('li');
+            li.innerText=arrays[i];
+            list.appendChild(li);
+        }
+    </script>
+</body>
+</html>
