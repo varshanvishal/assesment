@@ -1,0 +1,56 @@
+1.interface:
+interface support multiple inheritance. In interface we use only Abstract method. 
+In interface automatically assume public access modifier and abstract keyword in method. interface achieve 100% abstraction
+
+
+2. Constructor and object
+object:
+When an object is created from a class, the constructor is automatically invoked to initialize the object with the specified values or default values.
+Constructors can take parameters to allow the assignment of specific values during object creation.
+via create the instance of a class we can access class method and variables
+constructor:
+constructor does not have return type. constructor has two types default constructor and parameterized constructor. constructor is  initialize the object.
+we also achieve constructor overloading.
+
+
+3.virtual keyword and override keyword
+The virtual keyword is used to declare a method in a base class that can be overridden by derived classes
+The override keyword is used in a derived class to indicate that a method is intended to override a virtual method defined in a base class. 
+
+
+4.Can abstract class be sealed in C#
+A sealed class cannot be used as a base class. it cannot also be an abstract class. because sealed classes can't inherit.
+
+
+5.Create a C# program to convert from degrees Celsius to Kelvin and Fahrenheit from user input given in console.
+ Use the following conversion tables:
+
+
+using System;
+public class Celsius
+{
+    double celsius = Convert.ToDouble(Console.ReadLine()); //instance variable
+    public void kelvin()
+    {
+        double kelvin; 
+        kelvin = celsius + 273; 
+        Console.WriteLine("celsius convert to kelvin");
+        Console.WriteLine(kelvin);
+    }
+    public void Fahrenheit()
+    {
+        double fahrenheit= celsius*18/10+32;
+        Console.WriteLine("celsius convert to fahrenheit");
+        Console.WriteLine(fahrenheit);
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter celsius value");
+        Celsius c1=new Celsius(); // obj creation for celsius class
+        c1.kelvin(); // call kelvin method
+        c1.Fahrenheit(); // call fahrenheit method
+    }
+}
